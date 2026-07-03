@@ -39,8 +39,12 @@ function moveNoButton() {
   noBtn.textContent = noTexts[Math.min(noCount, noTexts.length - 1)];
 
   if (noCount > 5) {
-    noBtn.style.transform = `scale(${Math.max(0.55, 1 - noCount * 0.04)})`;
-    yesBtn.style.transform = `translate(-110%, -50%) scale(${Math.min(1.45, 1 + noCount * 0.05)})`;
+    noBtn.style.transform = `scale(${Math.max(0.60, 1 - noCount * 0.035)})`;
+    if (window.innerWidth > 760) {
+      yesBtn.style.transform = `translate(-110%, -50%) scale(${Math.min(1.35, 1 + noCount * 0.04)})`;
+    } else {
+      yesBtn.style.transform = `translate(-50%, -50%) scale(${Math.min(1.35, 1 + noCount * 0.04)})`;
+    }
   }
 }
 
@@ -53,8 +57,8 @@ noBtn.addEventListener("touchstart", (e) => {
 
 yesBtn.addEventListener("click", () => {
   result.textContent = "Date accepted. Best decision ever ❤️";
-  for (let i = 0; i < 60; i++) {
-    setTimeout(createHeart, i * 35);
+  for (let i = 0; i < 70; i++) {
+    setTimeout(createHeart, i * 30);
   }
 });
 
@@ -73,7 +77,7 @@ function createHeart() {
   setTimeout(() => heart.remove(), 6500);
 }
 
-setInterval(createHeart, 1100);
+setInterval(createHeart, 1300);
 
 musicBtn.addEventListener("click", async () => {
   if (bgMusic.paused) {
@@ -81,7 +85,7 @@ musicBtn.addEventListener("click", async () => {
       await bgMusic.play();
       musicBtn.textContent = "Music: on";
     } catch {
-      alert("Add a music.mp3 file first, or remove the audio section.");
+      alert("Add a file named music.mp3 to the same folder first.");
     }
   } else {
     bgMusic.pause();

@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="floating-hearts" aria-hidden="true"></div>
 
@@ -19,82 +20,86 @@
 
   <main>
     <section class="hero section">
-      <div class="hero-card">
+      <div class="hero-card reveal">
         <p class="eyebrow">A little website for a big love</p>
         <h1>Happy Anniversary, Riley</h1>
-        <p class="lead">I made this little story for you, because you are my favorite person and you deserve some sugars.</p>
+        <p class="lead">I made this little story for you because you are my favorite person and you deserve something sweet.</p>
         <a href="#story" class="primary">Start our story</a>
       </div>
     </section>
 
     <section id="story" class="section">
-  <div class="content">
+      <div class="content reveal">
+        <p class="eyebrow">Chapter 1</p>
+        <h2>How It Started</h2>
 
-    <p class="eyebrow">Chapter 1</p>
-    <h2>How It Started</h2>
+        <p class="lead">
+          Every great story has a beginning. Ours started with a few simple messages...
+          I had no idea they would become the first page of my favorite story.
+        </p>
 
-    <p class="lead">
-      Every great story has a beginning.
-      Ours started with a few simple messages...
-      I had no idea they would change my life forever.
-    </p>
+        <div class="messages-gallery">
+          <figure class="phone-frame">
+            <img src="photo1.jpg" alt="Screenshot of our first messages">
+            <figcaption>The first messages</figcaption>
+          </figure>
 
-    <div class="chat-gallery">
+          <figure class="phone-frame">
+            <img src="photo2.jpg" alt="Screenshot of more of our first conversation">
+            <figcaption>The beginning of everything</figcaption>
+          </figure>
+        </div>
 
-      <div class="phone-frame">
-        <img src="photo1.jpg" alt="Our first messages">
+        <p class="story-text">
+          Looking back now, it is amazing how something so small became so important.
+          These were just words on a screen, but somehow they changed everything.
+        </p>
       </div>
-
-      <div class="phone-frame">
-        <img src="photo2.jpg" alt="More of our first conversation">
-      </div>
-
-    </div>
-
-    <p class="story-text">
-      Looking back now, it's amazing how something so small became the start
-      of everything. These messages were just words on a screen...
-      but they became the first page of my favorite story.
-    </p>
-
-  </div>
-</section>
+    </section>
 
     <section class="section alt-bg">
-      <div class="content">
+      <div class="content reveal">
         <p class="eyebrow">Memories</p>
         <h2>Some moments I never want to forget</h2>
 
         <div class="memory-grid">
           <article class="memory-card">
-            <div class="photo-box small"><span>PHOTO 1</span></div>
-            <h3>Our first favorite memory</h3>
-            <p>Write the story here. What happened? What made it special?</p>
+            <img src="photo3.jpg" alt="A favorite memory of us">
+            <div class="memory-body">
+              <h3>Our first favorite memory</h3>
+              <p>Write the story here. What happened? What made it special?</p>
+            </div>
           </article>
 
           <article class="memory-card">
-            <div class="photo-box small"><span>PHOTO 2</span></div>
-            <h3>A moment that made me smile</h3>
-            <p>Write something funny, sweet, or very Riley here.</p>
+            <img src="photo4.jpg" alt="A sweet memory of us">
+            <div class="memory-body">
+              <h3>A moment that made me smile</h3>
+              <p>Write something funny, sweet, or very Riley here.</p>
+            </div>
           </article>
 
           <article class="memory-card">
-            <div class="photo-box small"><span>PHOTO 3</span></div>
-            <h3>A hard day we got through</h3>
-            <p>Write how she was there for you, or how you felt stronger together.</p>
+            <img src="photo5.jpg" alt="A meaningful memory of us">
+            <div class="memory-body">
+              <h3>A hard day we got through</h3>
+              <p>Write how she was there for you, or how you felt stronger together.</p>
+            </div>
           </article>
 
           <article class="memory-card">
-            <div class="photo-box small"><span>PHOTO 4</span></div>
-            <h3>My favorite ordinary moment</h3>
-            <p>Sometimes the simple moments are the ones I love the most.</p>
+            <img src="photo6.jpg" alt="An ordinary favorite moment">
+            <div class="memory-body">
+              <h3>My favorite ordinary moment</h3>
+              <p>Sometimes the simple moments are the ones I love the most.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="content">
+      <div class="content reveal">
         <p class="eyebrow">Reasons</p>
         <h2>Things I love about you</h2>
 
@@ -123,9 +128,10 @@
     </section>
 
     <section class="section alt-bg">
-      <div class="content letter-wrap">
+      <div class="content letter-wrap reveal">
         <p class="eyebrow">A letter</p>
         <h2>My love,</h2>
+
         <div class="letter">
           <p>Thank you for being you.</p>
           <p>Thank you for loving me, standing beside me, making me laugh, and turning ordinary moments into memories I want to keep forever.</p>
@@ -136,7 +142,7 @@
     </section>
 
     <section class="section final">
-      <div class="final-card">
+      <div class="final-card reveal">
         <p class="eyebrow">One more thing...</p>
         <h2>Will you go out with me for our anniversary date?</h2>
         <p class="lead">Choose carefully 😄</p>
@@ -152,7 +158,6 @@
   </main>
 
   <audio id="bgMusic" loop>
-    <!-- Optional: put your mp3 file in this folder and change the src below -->
     <source src="music.mp3" type="audio/mpeg">
   </audio>
 

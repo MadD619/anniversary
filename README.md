@@ -1,31 +1,34 @@
-# Anniversary Website V2
+# Anniversary Website V3
 
-## How to customize photos
+## Photos
 
-In `index.html`, find any section like:
+This ZIP already contains placeholder files named:
 
-```html
-<div class="photo-box">
-  <span>PHOTO HERE</span>
-</div>
-```
+- photo1.jpg
+- photo2.jpg
+- photo3.jpg
+- photo4.jpg
+- photo5.jpg
+- photo6.jpg
 
-Replace it with:
+Replace those files with your real photos using the exact same names.
 
-```html
-<img src="your-photo.jpg" alt="Us together">
-```
+Recommended:
+- photo1.jpg and photo2.jpg: screenshots of your first messages, vertical phone screenshots.
+- photo3.jpg to photo6.jpg: regular memories.
 
-Then put `your-photo.jpg` in the same GitHub repository folder.
+## Music
 
-## How to add music
-
-Put a file named `music.mp3` in the same folder.
-The music button will work automatically.
+Optional: add a file named `music.mp3` to the same folder.
 
 ## GitHub Pages
 
-Make sure the repository is public if you are using free GitHub Pages.
-Then go to:
+Upload everything to your GitHub repository:
+- index.html
+- style.css
+- script.js
+- photo1.jpg to photo6.jpg
+- README.md
 
+Then:
 Settings → Pages → Deploy from a branch → main → /root
