@@ -319,3 +319,39 @@ p {
     left: 54%;
   }
 }
+
+.chat-gallery{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    margin:50px 0;
+    flex-wrap:wrap;
+}
+
+.phone-frame{
+    width:300px;
+    border-radius:35px;
+    overflow:hidden;
+    background:white;
+    padding:12px;
+    box-shadow:0 25px 60px rgba(0,0,0,.18);
+    transition:.35s;
+}
+
+.phone-frame:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.phone-frame img{
+    width:100%;
+    display:block;
+    border-radius:25px;
+}
+
+.story-text{
+    max-width:700px;
+    margin:40px auto 0;
+    text-align:center;
+    font-size:1.15rem;
+}
