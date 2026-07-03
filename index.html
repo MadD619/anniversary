@@ -3,98 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Anniversary, My Love</title>
+  <title>Happy Anniversary, Riley</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="hearts" aria-hidden="true"></div>
+  <div class="floating-hearts" aria-hidden="true"></div>
 
-  <main class="app">
-    <section class="screen active" id="start">
-      <div class="glass hero">
-        <p class="eyebrow">A tiny website for a big love</p>
-        <h1>Happy Anniversary, Riley ❤️</h1>
-        <p class="lead">I made this little story for you because you deserve something sweet, personal, and a little extra.</p>
-        <button class="primary" data-next="chapter1">Start our story</button>
+  <header class="topbar">
+    <div class="brand">Mahdi + Riley ❤️</div>
+    <button id="musicBtn" class="tiny-btn">Music: off</button>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-card">
+        <p class="eyebrow">A little website for a big love</p>
+        <h1>Happy Anniversary, Riley</h1>
+        <p class="lead">I made this little story for you, because you are my favorite person and you deserve something sweet.</p>
+        <a href="#story" class="primary">Start our story</a>
       </div>
     </section>
 
-    <section class="screen" id="chapter1">
-      <div class="glass">
+    <section id="story" class="section">
+      <div class="content">
         <p class="eyebrow">Chapter 1</p>
-        <h2>How you became my favorite person</h2>
-        <p>
-          Somewhere along the way, ordinary days started feeling special because you were in them.
-          You became my calm place, my best friend, and the person who makes life feel warmer.
-        </p>
-        <div class="memory-row">
-          <button class="memory-card" data-note="The first moments are always special because they quietly become the beginning of everything.">The beginning</button>
-          <button class="memory-card" data-note="Some memories are simple, but because they are with you, they become my favorite ones.">Our little moments</button>
-          <button class="memory-card" data-note="With you, even stressful days feel easier, because I know I am not alone.">Through everything</button>
-        </div>
-        <p class="note" id="memoryNote">Tap a memory card.</p>
-        <div class="nav">
-          <button class="secondary" data-next="start">Back</button>
-          <button class="primary" data-next="chapter2">Next</button>
+        <h2>How it started</h2>
+        <div class="split">
+          <div class="photo-box">
+            <span>PHOTO HERE</span>
+            <small>Replace with your photo</small>
+          </div>
+          <div>
+            <p>Somewhere along the way, ordinary days became special because you were in them.</p>
+            <p>You became my calm place, my best friend, and the person who makes life feel warmer.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="screen" id="chapter2">
-      <div class="glass">
-        <p class="eyebrow">Chapter 2</p>
+    <section class="section alt-bg">
+      <div class="content">
+        <p class="eyebrow">Memories</p>
+        <h2>Some moments I never want to forget</h2>
+
+        <div class="memory-grid">
+          <article class="memory-card">
+            <div class="photo-box small"><span>PHOTO 1</span></div>
+            <h3>Our first favorite memory</h3>
+            <p>Write the story here. What happened? What made it special?</p>
+          </article>
+
+          <article class="memory-card">
+            <div class="photo-box small"><span>PHOTO 2</span></div>
+            <h3>A moment that made me smile</h3>
+            <p>Write something funny, sweet, or very Riley here.</p>
+          </article>
+
+          <article class="memory-card">
+            <div class="photo-box small"><span>PHOTO 3</span></div>
+            <h3>A hard day we got through</h3>
+            <p>Write how she was there for you, or how you felt stronger together.</p>
+          </article>
+
+          <article class="memory-card">
+            <div class="photo-box small"><span>PHOTO 4</span></div>
+            <h3>My favorite ordinary moment</h3>
+            <p>Sometimes the simple moments are the ones I love the most.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="content">
+        <p class="eyebrow">Reasons</p>
         <h2>Things I love about you</h2>
-        <p>Open each little note.</p>
 
         <div class="love-grid">
-          <button class="flip-card"><span>Your kindness</span><small>You make people feel cared for, and you made me feel like I have family here.</small></button>
-          <button class="flip-card"><span>Your smile</span><small>It is one of those things that can change my whole day.</small></button>
-          <button class="flip-card"><span>Your heart</span><small>You love in a way that feels real, safe, and honest.</small></button>
-          <button class="flip-card"><span>Us</span><small>My favorite part of life is getting to share it with you.</small></button>
-        </div>
+          <button class="flip-card">
+            <strong>Your kindness</strong>
+            <span>You make people feel cared for, and you made me feel like I have family here.</span>
+          </button>
 
-        <div class="nav">
-          <button class="secondary" data-next="chapter1">Back</button>
-          <button class="primary" data-next="letter">Open the letter</button>
+          <button class="flip-card">
+            <strong>Your smile</strong>
+            <span>It can change my whole day in one second.</span>
+          </button>
+
+          <button class="flip-card">
+            <strong>Your heart</strong>
+            <span>You love in a way that feels real, safe, and honest.</span>
+          </button>
+
+          <button class="flip-card">
+            <strong>Us</strong>
+            <span>My favorite part of life is getting to share it with you.</span>
+          </button>
         </div>
       </div>
     </section>
 
-    <section class="screen" id="letter">
-      <div class="glass letter">
-        <p class="eyebrow">A letter for you</p>
+    <section class="section alt-bg">
+      <div class="content letter-wrap">
+        <p class="eyebrow">A letter</p>
         <h2>My love,</h2>
-        <p>
-          Thank you for being you. Thank you for loving me, standing beside me,
-          making me laugh, and turning ordinary moments into memories I want to keep forever.
-        </p>
-        <p>
-          You are my peace, my home, and my favorite chapter.
-          I am so lucky that I get to love you.
-        </p>
-        <div class="nav">
-          <button class="secondary" data-next="chapter2">Back</button>
-          <button class="primary" data-next="question">One more thing…</button>
+        <div class="letter">
+          <p>Thank you for being you.</p>
+          <p>Thank you for loving me, standing beside me, making me laugh, and turning ordinary moments into memories I want to keep forever.</p>
+          <p>You are my peace, my home, and my favorite chapter.</p>
+          <p>I am so lucky that I get to love you.</p>
         </div>
       </div>
     </section>
 
-    <section class="screen" id="question">
-      <div class="glass final-card">
-        <p class="eyebrow">The big question</p>
+    <section class="section final">
+      <div class="final-card">
+        <p class="eyebrow">One more thing...</p>
         <h2>Will you go out with me for our anniversary date?</h2>
-        <p class="lead">I already know the answer should be yes 😄</p>
-        <div class="answer-buttons">
-          <button class="yes" id="yesBtn">Yes ❤️</button>
-          <button class="yes alt" id="alsoYesBtn">Also yes 😘</button>
+        <p class="lead">Choose carefully 😄</p>
+
+        <div class="answer-zone" id="answerZone">
+          <button id="yesBtn" class="yes-btn">Yes ❤️</button>
+          <button id="noBtn" class="no-btn">No 😅</button>
         </div>
-        <p class="celebration" id="celebration"></p>
+
+        <p id="result" class="result"></p>
       </div>
     </section>
   </main>
+
+  <audio id="bgMusic" loop>
+    <!-- Optional: put your mp3 file in this folder and change the src below -->
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
 
   <script src="script.js"></script>
 </body>

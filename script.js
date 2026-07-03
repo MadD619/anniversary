@@ -1,50 +1,90 @@
-const screens = document.querySelectorAll(".screen");
-const navButtons = document.querySelectorAll("[data-next]");
-const memoryCards = document.querySelectorAll(".memory-card");
-const memoryNote = document.getElementById("memoryNote");
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const answerZone = document.getElementById("answerZone");
+const result = document.getElementById("result");
+const heartsWrap = document.querySelector(".floating-hearts");
 const flipCards = document.querySelectorAll(".flip-card");
-const celebration = document.getElementById("celebration");
-const hearts = document.querySelector(".hearts");
+const musicBtn = document.getElementById("musicBtn");
+const bgMusic = document.getElementById("bgMusic");
 
-function showScreen(id) {
-  screens.forEach(screen => screen.classList.toggle("active", screen.id === id));
-  window.scrollTo({ top: 0, behavior: "smooth" });
+let noCount = 0;
+
+const noTexts = [
+  "No 😅",
+  "Are you sure? 🥺",
+  "Try again 😂",
+  "Nice try 😏",
+  "Nope!",
+  "You can't catch me",
+  "Click yes ❤️",
+  "I know you want to",
+  "Still no? 😭"
+];
+
+function moveNoButton() {
+  noCount++;
+
+  const zone = answerZone.getBoundingClientRect();
+  const btn = noBtn.getBoundingClientRect();
+
+  const maxX = Math.max(0, zone.width - btn.width);
+  const maxY = Math.max(0, zone.height - btn.height);
+
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
+
+  noBtn.style.left = `${x}px`;
+  noBtn.style.top = `${y}px`;
+  noBtn.style.transform = "none";
+  noBtn.textContent = noTexts[Math.min(noCount, noTexts.length - 1)];
+
+  if (noCount > 5) {
+    noBtn.style.transform = `scale(${Math.max(0.55, 1 - noCount * 0.04)})`;
+    yesBtn.style.transform = `translate(-110%, -50%) scale(${Math.min(1.45, 1 + noCount * 0.05)})`;
+  }
 }
 
-navButtons.forEach(button => {
-  button.addEventListener("click", () => showScreen(button.dataset.next));
+noBtn.addEventListener("mouseenter", moveNoButton);
+noBtn.addEventListener("click", moveNoButton);
+noBtn.addEventListener("touchstart", (e) => {
+  e.preventDefault();
+  moveNoButton();
 });
 
-memoryCards.forEach(card => {
-  card.addEventListener("click", () => {
-    memoryNote.textContent = card.dataset.note;
-  });
+yesBtn.addEventListener("click", () => {
+  result.textContent = "Date accepted. Best decision ever ❤️";
+  for (let i = 0; i < 60; i++) {
+    setTimeout(createHeart, i * 35);
+  }
 });
 
 flipCards.forEach(card => {
   card.addEventListener("click", () => card.classList.toggle("open"));
 });
 
-function celebrate() {
-  celebration.textContent = "Date accepted. Best decision ever ❤️";
-  for (let i = 0; i < 34; i++) {
-    setTimeout(createHeart, i * 55);
-  }
-}
-
-document.getElementById("yesBtn").addEventListener("click", celebrate);
-document.getElementById("alsoYesBtn").addEventListener("click", celebrate);
-
 function createHeart() {
   const heart = document.createElement("div");
   heart.className = "heart";
-  heart.textContent = ["❤️", "💕", "💗", "💖"][Math.floor(Math.random() * 4)];
+  heart.textContent = ["❤️", "💕", "💗", "💖", "💘"][Math.floor(Math.random() * 5)];
   heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = 16 + Math.random() * 28 + "px";
   heart.style.animationDuration = 3 + Math.random() * 3 + "s";
-  heart.style.fontSize = 16 + Math.random() * 24 + "px";
-  hearts.appendChild(heart);
-
+  heartsWrap.appendChild(heart);
   setTimeout(() => heart.remove(), 6500);
 }
 
-setInterval(createHeart, 900);
+setInterval(createHeart, 1100);
+
+musicBtn.addEventListener("click", async () => {
+  if (bgMusic.paused) {
+    try {
+      await bgMusic.play();
+      musicBtn.textContent = "Music: on";
+    } catch {
+      alert("Add a music.mp3 file first, or remove the audio section.");
+    }
+  } else {
+    bgMusic.pause();
+    musicBtn.textContent = "Music: off";
+  }
+});
