@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Anniversary, My Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hearts" aria-hidden="true"></div>
+
+  <main class="app">
+    <section class="screen active" id="start">
+      <div class="glass hero">
+        <p class="eyebrow">A tiny website for a big love</p>
+        <h1>Happy Anniversary, Riley ❤️</h1>
+        <p class="lead">I made this little story for you because you deserve something sweet, personal, and a little extra.</p>
+        <button class="primary" data-next="chapter1">Start our story</button>
+      </div>
+    </section>
+
+    <section class="screen" id="chapter1">
+      <div class="glass">
+        <p class="eyebrow">Chapter 1</p>
+        <h2>How you became my favorite person</h2>
+        <p>
+          Somewhere along the way, ordinary days started feeling special because you were in them.
+          You became my calm place, my best friend, and the person who makes life feel warmer.
+        </p>
+        <div class="memory-row">
+          <button class="memory-card" data-note="The first moments are always special because they quietly become the beginning of everything.">The beginning</button>
+          <button class="memory-card" data-note="Some memories are simple, but because they are with you, they become my favorite ones.">Our little moments</button>
+          <button class="memory-card" data-note="With you, even stressful days feel easier, because I know I am not alone.">Through everything</button>
+        </div>
+        <p class="note" id="memoryNote">Tap a memory card.</p>
+        <div class="nav">
+          <button class="secondary" data-next="start">Back</button>
+          <button class="primary" data-next="chapter2">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="chapter2">
+      <div class="glass">
+        <p class="eyebrow">Chapter 2</p>
+        <h2>Things I love about you</h2>
+        <p>Open each little note.</p>
+
+        <div class="love-grid">
+          <button class="flip-card"><span>Your kindness</span><small>You make people feel cared for, and you made me feel like I have family here.</small></button>
+          <button class="flip-card"><span>Your smile</span><small>It is one of those things that can change my whole day.</small></button>
+          <button class="flip-card"><span>Your heart</span><small>You love in a way that feels real, safe, and honest.</small></button>
+          <button class="flip-card"><span>Us</span><small>My favorite part of life is getting to share it with you.</small></button>
+        </div>
+
+        <div class="nav">
+          <button class="secondary" data-next="chapter1">Back</button>
+          <button class="primary" data-next="letter">Open the letter</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="letter">
+      <div class="glass letter">
+        <p class="eyebrow">A letter for you</p>
+        <h2>My love,</h2>
+        <p>
+          Thank you for being you. Thank you for loving me, standing beside me,
+          making me laugh, and turning ordinary moments into memories I want to keep forever.
+        </p>
+        <p>
+          You are my peace, my home, and my favorite chapter.
+          I am so lucky that I get to love you.
+        </p>
+        <div class="nav">
+          <button class="secondary" data-next="chapter2">Back</button>
+          <button class="primary" data-next="question">One more thing…</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="question">
+      <div class="glass final-card">
+        <p class="eyebrow">The big question</p>
+        <h2>Will you go out with me for our anniversary date?</h2>
+        <p class="lead">I already know the answer should be yes 😄</p>
+        <div class="answer-buttons">
+          <button class="yes" id="yesBtn">Yes ❤️</button>
+          <button class="yes alt" id="alsoYesBtn">Also yes 😘</button>
+        </div>
+        <p class="celebration" id="celebration"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
